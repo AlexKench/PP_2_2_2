@@ -1,21 +1,8 @@
-package web;
+package web.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Car {
-    private static final List<Car> carList;
-
-    static {
-        carList = new ArrayList<>();
-        carList.add(new Car("BMW", "EK202X", 50));
-        carList.add(new Car("Audi", "EM500X", 20));
-        carList.add(new Car("Honda", "TY779P", 17));
-        carList.add(new Car("Volga", "KK808L", 40));
-        carList.add(new Car("Lada", "BB114K", 11));
-    }
-
 
     private String model;
     private String number;
@@ -50,10 +37,6 @@ public class Car {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public static List<Car> getCarList() {
-        return carList;
     }
 
 
