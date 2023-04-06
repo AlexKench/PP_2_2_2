@@ -40,16 +40,23 @@ public class Car {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Car car = (Car) o;
 
-        if (price != car.price) return false;
-        if (!Objects.equals(model, car.model)) return false;
+        if (price != car.price) {
+            return false;
+        }
+        if (!Objects.equals(model, car.model)) {
+            return false;
+        }
         return Objects.equals(number, car.number);
     }
 

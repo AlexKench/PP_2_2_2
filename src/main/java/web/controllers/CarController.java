@@ -22,7 +22,7 @@ public class CarController {
 
     @GetMapping
     public String viewCar(@RequestParam(value = "count", required = false) Integer count, ModelMap model) {
-        model.addAttribute("car", carService.showCarCant(count));
+        model.addAttribute("car", carService.showNumberOfCars(count));
         return "cars";
     }
 

@@ -22,8 +22,10 @@ public class CarDaoImp implements CarDao {
     }
 
     @Override
-    public List<Car> showCarCant(Integer count) {
-        if (count == null || count < 0) return carList;
+    public List<Car> showNumberOfCars(Integer count) {
+        if (count == null || count < 0) {
+            return carList;
+        }
         return carList.stream().limit(count).collect(Collectors.toList());
     }
 
